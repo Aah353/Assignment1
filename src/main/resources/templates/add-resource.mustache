@@ -1,0 +1,25 @@
+<h1>Add Resource</h1>
+
+<form action="/resources/add" method="post">
+
+    Title:<br>
+    <input type="text" name="title"><br><br>
+
+    Type:<br>
+    <input type="text" name="type"><br><br>
+
+    Description:<br>
+    <input type="text" name="shortDescription"><br><br>
+
+    Category:<br>
+    <select name="categoryId">
+        {{#categories}}
+            <option value="{{id}}">{{name}}</option>
+        {{/categories}}
+    </select>
+
+    <br><br>
+
+    <button type="submit">Add</button>
+
+</form>
